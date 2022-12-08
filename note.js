@@ -213,3 +213,10 @@ const {right, top} = processInput2(inputArr)
 
 console.log(processInput2(inputArr))
 console.log(right)
+
+function concatenateAll(...args){
+    return args.join('')
+    // return args
+}
+
+console.log(concatenateAll(10,20,30,40,50))
