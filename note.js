@@ -242,3 +242,51 @@ class Jedi {
 const luke = new Jedi();
 
 console.log(luke.jump().setHeight(20));
+
+// 15.6 !!!!!!!!!!
+
+let maybe1 = 1;
+let maybe2 = 2;
+let maybeNull = null;
+
+const foo = maybe1 > maybe2 ? 'bar' : maybeNull;
+
+console.log(foo)
+
+let aa = undefined;
+let bb = 'b';
+
+const fooo = aa || bb;
+
+console.log(fooo)
+
+let cc = 1;
+const bar = cc ? true : false;
+
+// if x exists, !!x = true. EXISTENTIAL OPERATOR
+const barr = !!cc;
+console.log(bar)
+console.log(barr) 
+
+
+let baz = cc ? false : true;
+let bazz = !cc
+
+console.log(baz)
+console.log(bazz)
+
+// if x exists, x ?? y returns y. 
+let quux = aa ?? bb;
+console.log(quux)
+
+// 20.2 Additional trailing comma: Yup. eslint: comma-dangle
+
+// Why? This leads to cleaner git diffs. Also, transpilers like Babel will remove the additional trailing comma in the transpiled code which means you don’t have to worry about the trailing comma problem in legacy browsers.
+
+
+// good - git diff with trailing comma
+const hero = {
+  firstName: 'Florence',
+  lastName: 'Nightingale',
+  inventorOf: ['coxcomb chart', 'modern nursing'],
+};
