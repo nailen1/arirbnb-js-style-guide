@@ -243,6 +243,24 @@ const luke = new Jedi();
 
 console.log(luke.jump().setHeight(20));
 
+
+// 13.4
+
+function checkName(hasName) {
+    if (hasName === 'test') {
+        return false;
+    }
+
+    const name = getName();
+
+    if (name === 'test') {
+        this.setName('');
+        return false;
+    }
+
+    return name;
+}
+
 // 15.6 !!!!!!!!!!
 
 let maybe1 = 1;
@@ -266,7 +284,7 @@ const bar = cc ? true : false;
 // if x exists, !!x = true. EXISTENTIAL OPERATOR
 const barr = !!cc;
 console.log(bar)
-console.log(barr) 
+console.log(barr)
 
 
 let baz = cc ? false : true;
@@ -286,7 +304,62 @@ console.log(quux)
 
 // good - git diff with trailing comma
 const hero = {
-  firstName: 'Florence',
-  lastName: 'Nightingale',
-  inventorOf: ['coxcomb chart', 'modern nursing'],
+    firstName: 'Florence',
+    lastName: 'Nightingale',
+    inventorOf: ['coxcomb chart', 'modern nursing'],
 };
+
+// good (note that a comma must not appear after a "rest" element)
+// createHero(
+//     firstName,
+//     lastName,
+//     inventorOf,
+//     ...heroArgs
+// );
+
+
+let x = 'Jeonga'
+
+if (!!x) {
+    console.log(x)
+}
+
+console.log(!!x)
+
+
+// 22.3
+
+const inputValue = '4';
+
+const vall1 = Number(inputValue);
+
+const vall2 = parseInt(inputValue, 10);
+
+console.log(vall1, vall2)
+
+const inputValue2 = '1111';
+const vall3 = parseInt(inputValue2, 2)
+console.log(vall3)
+
+
+const inputValue3 = 'EF';
+console.log(parseInt(inputValue3, 16))
+
+// 23.6
+
+// export default function fortyTwo() { return 42; }
+
+// 24.3
+
+// 24.3 If the property/method is a boolean, use isVal() or hasVal().
+
+// bad
+// if (!dragon.age()) {
+//   return false;
+// }
+
+// good
+// if (!dragon.hasAge()) {
+//   return false;
+// }
+
